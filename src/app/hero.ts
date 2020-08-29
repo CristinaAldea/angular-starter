@@ -4,5 +4,6 @@ constructor(
     public alterEgo: string,
     public description: string,
     public photo: string,
+    public universe: string
   ) {}
 }
