@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
+import { Hero } from '../hero';
 
 @Component({
   selector: 'jsh-hero',
@@ -6,12 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit {
-public name='Cristina'
+  @Input() hero:Hero;
   constructor() { }
-sayHello() {
-    alert('Hello ' + this.name);
-}
+
   ngOnInit() {
   }
+callHero(){alert('Call '+this.hero.name+' '+this.hero.alterEgo+'!!!');}
 
 }
